@@ -49,8 +49,13 @@ def model_train(epoch,n):
                      activation='relu',
                      input_shape=input_shape))
     model.add(MaxPooling2D(pool_size=(2, 2)))
-    if n>1:
+    #if we need to increase the layers then
+    if n==2:
         model.add(Conv2D(32, kernel_size=(3, 3),
+                     activation='relu'))
+        model.add(MaxPooling2D(pool_size=(2, 2)))
+    elif n==3:
+        model.add(Conv2D(16, kernel_size=(3, 3),
                      activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Flatten())
