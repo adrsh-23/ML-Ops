@@ -1,4 +1,4 @@
-#Importing all the functions here
+#Importing all the libraries here
 
 import keras
 from keras.datasets import mnist
